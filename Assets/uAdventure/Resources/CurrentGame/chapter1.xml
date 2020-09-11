@@ -1,0 +1,1668 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<eAdventure version="2">
+  <player>
+    <resources name="No name">
+      <asset type="standup" uri="assets/special/EmptyAnimation" />
+      <asset type="standdown" uri="assets/special/EmptyAnimation" />
+      <asset type="standright" uri="assets/special/EmptyAnimation" />
+      <asset type="standleft" uri="assets/special/EmptyAnimation" />
+      <asset type="speakup" uri="assets/special/EmptyAnimation" />
+      <asset type="speakdown" uri="assets/special/EmptyAnimation" />
+      <asset type="speakright" uri="assets/special/EmptyAnimation" />
+      <asset type="speakleft" uri="assets/special/EmptyAnimation" />
+      <asset type="useright" uri="assets/special/EmptyAnimation" />
+      <asset type="useleft" uri="assets/special/EmptyAnimation" />
+      <asset type="walkup" uri="assets/special/EmptyAnimation" />
+      <asset type="walkdown" uri="assets/special/EmptyAnimation" />
+      <asset type="walkright" uri="assets/special/EmptyAnimation" />
+      <asset type="walkleft" uri="assets/special/EmptyAnimation" />
+    </resources>
+    <textcolor showsSpeechBubble="no" bubbleBkgColor="#FFFFFF" bubbleBorderColor="#000000">
+      <frontcolor color="#FFFFFF" />
+      <bordercolor color="#000000" />
+    </textcolor>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <voice name="" synthesizeAlways="no" />
+  </player>
+  <map-scene id="Rennes" cameraType="Aerial2D" renderStyle="Tile" tileMetaIdentifier="OSMTile" usesGameplayArea="yes" gameplayArea="48.1092275376639 -1.68679637485211 0.00641834587978707 0.0209004955831669" center="(48.1124654641355, -1.67679637670545)" zoom="16" start="yes">
+    <map-element targetId="PointDeDepart" layer="0" scale="1" orientation="2">
+      <condition />
+    </map-element>
+    <map-element targetId="squareLorette" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme2" />
+      </condition>
+    </map-element>
+    <map-element targetId="rueMonnaie" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme2" />
+      </condition>
+    </map-element>
+    <map-element targetId="hotelMonnaiesDeBretagne" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme2" />
+      </condition>
+    </map-element>
+    <map-element targetId="maisonTiKoz" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme2" />
+      </condition>
+    </map-element>
+    <map-element targetId="porteMordelaise" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme2" />
+      </condition>
+    </map-element>
+    <map-element targetId="cathédraleRennes" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme2" />
+      </condition>
+    </map-element>
+    <map-element targetId="Officedutourisme(ancien)1" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme1" />
+      </condition>
+    </map-element>
+    <map-element targetId="incendie1" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme2" />
+      </condition>
+    </map-element>
+    <map-element targetId="ruedeToulouse" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme3" />
+      </condition>
+    </map-element>
+    <map-element targetId="devantureMagasinEnBois" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme3" />
+      </condition>
+    </map-element>
+    <map-element targetId="rueLaFayette" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme4" />
+      </condition>
+    </map-element>
+    <map-element targetId="RueNationale" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme5" />
+      </condition>
+    </map-element>
+    <map-element targetId="Parlement" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme5" />
+      </condition>
+    </map-element>
+    <map-element targetId="rueVictorHugo" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme6" />
+      </condition>
+    </map-element>
+    <map-element targetId="parcTabor" layer="0" scale="1" orientation="2">
+      <condition>
+        <active flag="enigme6" />
+      </condition>
+    </map-element>
+  </map-scene>
+  <geoelement id="PointDeDepart">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="50">
+        <Point>
+          <pos>48.1097907867664 -1.68554440140759</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <condition>
+          <inactive flag="enigme1" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Enigme1" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+      <exit-action>
+        <condition>
+          <inactive flag="enigme2" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Enigme2" />
+          <condition />
+          <generate-object idTarget="TablePeutinger" />
+          <condition />
+        </effect>
+        <only-from-inside>True</only-from-inside>
+      </exit-action>
+      <inspect-action>
+        <condition>
+          <active flag="enigme1" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Condate" />
+          <condition />
+        </effect>
+        <inside>True</inside>
+      </inspect-action>
+    </actions>
+  </geoelement>
+  <geoelement id="squareLorette">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>48.1112163435539 -1.68548807501797 48.1112038074229 -1.68529763817792 48.1111357540866 -1.68514207005504 48.1107184777123 -1.68467536568647 48.1103925341531 -1.68467804789547 48.1103979068659 -1.6850937902928</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="squareLorette1" />
+          <condition />
+        </effect>
+        <inside>True</inside>
+      </inspect-action>
+    </actions>
+  </geoelement>
+  <geoelement id="rueMonnaie">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="5">
+        <LineString>
+          <posList>48.1114028978896 -1.6845485644483 48.1114727417389 -1.6845075657277 48.1118812930604 -1.68401672147804 48.1121230575757 -1.68348372738758 48.1122518796677 -1.68295092616681 48.1124202183104 -1.6814918044627</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="rueDeLaMonnaie" />
+          <condition />
+        </effect>
+        <inside>False</inside>
+      </inspect-action>
+    </actions>
+  </geoelement>
+  <geoelement id="cathédraleRennes">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="2">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>48.1113452 -1.683995 48.1113452 -1.6827688 48.1118402 -1.6827688 48.1118402 -1.683995</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="cathédrale" />
+          <condition />
+        </effect>
+        <inside>True</inside>
+      </inspect-action>
+    </actions>
+  </geoelement>
+  <geoelement id="porteMordelaise">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="20">
+        <Point>
+          <pos>48.1119099 -1.6847224</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="porteMordelaise1" />
+          <condition />
+        </effect>
+        <inside>True</inside>
+      </inspect-action>
+    </actions>
+  </geoelement>
+  <geoelement id="maisonTiKoz">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <Point>
+          <pos>48.1119411562137 -1.68293727638933</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="MaisonTiKoz1505" />
+          <condition />
+        </effect>
+        <inside>False</inside>
+      </inspect-action>
+    </actions>
+  </geoelement>
+  <geoelement id="hotelMonnaiesDeBretagne">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <Point>
+          <pos>48.1123221973669 -1.68242901563668</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="HotelMonnaiesBretagne" />
+          <condition />
+        </effect>
+        <inside>True</inside>
+      </inspect-action>
+    </actions>
+  </geoelement>
+  <geoelement id="Officedutourisme(ancien)1">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="8">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>48.1104185281684 -1.68301628281908 48.1104167372649 -1.68251419167601 48.1105905941433 -1.68247932295885 48.1105476125864 -1.68304042270024</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="Officedutourisme(ancien)" />
+          <condition />
+        </effect>
+        <inside>True</inside>
+      </inspect-action>
+    </actions>
+  </geoelement>
+  <geoelement id="incendie1">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <Point>
+          <pos>48.1121860935665 -1.68331950902961</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <condition>
+          <inactive flag="enigme3" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Enigme3" />
+          <condition />
+          <generate-object idTarget="PlanBretagne" />
+          <condition />
+          <generate-object idTarget="VueRennes" />
+          <condition />
+          <generate-object idTarget="PlanHévin" />
+          <condition />
+          <generate-object idTarget="PlanArgentré" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="incendie" />
+          <condition />
+        </effect>
+        <inside>True</inside>
+      </inspect-action>
+    </actions>
+  </geoelement>
+  <geoelement id="ruedeToulouse">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="6">
+        <LineString>
+          <posList>48.1124117 -1.6814414 48.1124117 -1.6802868 48.1124133 -1.6802868 48.1124133 -1.6814414</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="rueToulouse" />
+          <condition />
+        </effect>
+        <inside>True</inside>
+      </inspect-action>
+      <enter-action>
+        <condition>
+          <inactive flag="enigme4" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Enigme4" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+    </actions>
+  </geoelement>
+  <geoelement id="devantureMagasinEnBois">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="10">
+        <Point>
+          <pos>48.1123731016378 -1.68031961156998</pos>
+        </Point>
+      </geometry>
+    </geometries>
+    <actions>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="devantureMagazin" />
+          <condition />
+        </effect>
+        <inside>True</inside>
+      </inspect-action>
+    </actions>
+  </geoelement>
+  <geoelement id="rueLaFayette">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="6">
+        <LineString>
+          <posList>48.1124115 -1.6802868 48.1124115 -1.6793073 48.112412 -1.6793073 48.112412 -1.6802868</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <condition>
+          <inactive flag="enigme5" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Enigme5" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="TourSaintJames" />
+          <condition />
+        </effect>
+        <inside>True</inside>
+      </inspect-action>
+    </actions>
+  </geoelement>
+  <geoelement id="RueNationale">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="6">
+        <LineString>
+          <posList>48.1124115 -1.6793073 48.1124115 -1.6782925 48.1124141 -1.6782925 48.1124141 -1.6793073</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="CartePostale" />
+          <condition />
+        </effect>
+        <inside>True</inside>
+      </inspect-action>
+      <enter-action>
+        <condition>
+          <inactive flag="enigme6" />
+        </condition>
+        <effect>
+          <trigger-conversation idTarget="Enigme6" />
+          <condition />
+        </effect>
+        <only-from-outside>True</only-from-outside>
+      </enter-action>
+    </actions>
+  </geoelement>
+  <geoelement id="Parlement">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="5">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>48.1125214678664 -1.67826928090295 48.1125167109735 -1.67738146971901 48.1131184264411 -1.67734928321082 48.1131220080597 -1.67826928090295</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions>
+      <inspect-action>
+        <effect>
+          <trigger-conversation idTarget="PalaisDuParlement" />
+          <condition />
+        </effect>
+        <inside>True</inside>
+      </inspect-action>
+    </actions>
+  </geoelement>
+  <geoelement id="parcTabor">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="0">
+        <Polygon>
+          <exterior>
+            <LinearRing>
+              <posList>48.115561719575 -1.67163848876947 48.1150030105851 -1.66601657867425 48.1137279852666 -1.66618824005118 48.1130976239837 -1.66919231414787 48.1124099483101 -1.66932106018059 48.1122666813864 -1.67127370834342 48.1139428793911 -1.67144536972039 48.1136420273652 -1.6733765602111 48.1145302520791 -1.67363405227654 48.1144299694125 -1.67155265808099</posList>
+            </LinearRing>
+          </exterior>
+        </Polygon>
+      </geometry>
+    </geometries>
+    <actions />
+  </geoelement>
+  <geoelement id="rueVictorHugo">
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <geometries>
+      <geometry influence="6">
+        <LineString>
+          <posList>48.1124075365889 -1.6772204076659 48.1124209 -1.6734798</posList>
+        </LineString>
+      </geometry>
+    </geometries>
+    <actions>
+      <enter-action>
+        <condition>
+          <inactive flag="enigme6" />
+        </condition>
+        <only-from-outside>False</only-from-outside>
+      </enter-action>
+    </actions>
+  </geoelement>
+  <graph-conversation id="Enigme1">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>La ville d’une rencontre où tout a commencé.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Tu es au point de départ de ce jeu. Ceci est la première énigme. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/condate.jpg" />
+        </resources>
+        <text>Comment se nommait Rennes, autrefois ?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="NomRennes" random="yes" keepShowing="yes" preListening="yes" editor-x="41" editor-y="410" x="41" y="410">
+      <speak-player correct="true">
+        <text>Condate</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Lugdunum</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Lutecia</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="848" editor-y="307">
+      <speak-player>
+        <resources name="No name" />
+        <text>Condate Riedonum Rennes autrefois Condate Riedonum est le nom gallo-romain de l’actuelle Rennes. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Elle était la principale ville et la capitale de la civitas Riedonum.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Condate est un toponyme d'origine gauloise désignant une confluence, celle de la jonction de l'Ille et de la vilaine.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Tu as trouvé le point de départ, la confluence entre l'Ille et la Vilaine.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/condate (1).jpg" />
+        </resources>
+        <text>Astérix l'a même visité ici. :) </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Rejoins maintenant la place du Maréchal Foch pour continuer.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="enigme1" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="784" editor-y="551">
+      <speak-player>
+        <resources name="No name" />
+        <text>Et bien non, Lugdunum c'était Lyon la capitale des Gaulles.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>indice 1 : Astérix pourrait bien t'aider.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Comment se nommait Rennes, autrefois ?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="392" editor-y="766">
+      <speak-player>
+        <resources name="No name" />
+        <text>Et bien non, Lutecia c'était Paris l'actuelle capitale.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>indice 2 : C'est une traduction du mot confluence </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Comment se nommait Rennes, autrefois ?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Enigme2">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name" />
+        <text>En marche</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Les vestiges des Marches de Bretagne te contemplent.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/Rue_et_chapelle_st_yves.jpg" />
+        </resources>
+        <text>Ces anciennes douves marquent aujourd’hui l’emplacement qui me rend hommage,je suis l’auteur de ce dessin. Qui suis-je ?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="enigme2" random="yes" keepShowing="yes" preListening="yes" editor-x="0" editor-y="417" x="0" y="417">
+      <speak-player correct="true">
+        <text>Hyacinthe Lorette</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Le Général Foch</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Landais</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="375" editor-y="201">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hyacinthe Lorette, dessinateur. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Hyacinthe Jean Lorette est né le 28 Nivose de l’An II (17 janvier 1794), rue des Fossés à Rennes. Dessinateur et peintre. Professeur de dessin et de géographie. Brasseur. Lithographe.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Cet homme nous laisse une magnifique collection de dessins consultable sur le site des archives de Rennes.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/squareHyacinthe.jpg" />
+        </resources>
+        <text>Le square Hyacinthe Lorette est situé entre la rue Nantaise et la rue de la Monnaie, à proximité de la place Maréchal Foch et de la Croix de la Mission. Cet agréable square se trouve aux pieds des principaux vestiges visibles des remparts de Rennes, le mur gallo-romain et la tour Duchesne</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Remontes la rue à l’est de ce square (rue de la monnaie).</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="enigme2" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="784" editor-y="551">
+      <speak-player>
+        <resources name="No name" />
+        <text>Et bien non.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Indice 1 : Je suis au pied des remparts.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="426" editor-y="773">
+      <speak-player>
+        <resources name="No name" />
+        <text>Et bien non!!!</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Indice 2 : J'ai donnée mon nom au square tout près du point de départ</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="squareLorette1">
+    <dialogue-node nodeindex="0" editor-x="117" editor-y="88">
+      <speak-player>
+        <resources name="No name" />
+        <text>Hyacinthe Lorette, dessinateur. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Hyacinthe Jean Lorette est né le 28 Nivose de l’An II (17 janvier 1794), rue des Fossés à Rennes. Dessinateur et peintre. Professeur de dessin et de géographie. Brasseur. Lithographe.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Cet homme nous laisse une magnifique collection de dessins consultable sur le site des archives de Rennes.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/squareHyacinthe.jpg" />
+        </resources>
+        <text>Le square Hyacinthe Lorette est situé entre la rue Nantaise et la rue de la Monnaie, à proximité de la place Maréchal Foch et de la Croix de la Mission. Cet agréable square se trouve aux pieds des principaux vestiges visibles des remparts de Rennes, le mur gallo-romain et la tour Duchesne</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Remontes la rue à l’est de ce square (rue de la monnaie).</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="rueDeLaMonnaie">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/ruedelamonnaie.jpg" />
+        </resources>
+        <text>La rue de la Monnaie tient son nom de l'ancien Hôtel des Monnaies, l'orthographe utilisée était rue de la Monnoye. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>En 1725, lorsque Rennes commença à renaître de ses cendres, l’on songea à bâtir un hôtel pour les monnaies dans l’une des nouvelles rues projetées.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>On fit, à cet effet, l’acquisition d’un terrain appartenant en partie au couvent de la Trinité. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>La construction du bâtiment, dont les dépenses s’élevèrent à 126 200 livres fut commencée en 1728. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>La Monnaie s’y installa en 1732 et y resta jusqu’en 1774, époque à laquelle un édit de Louis XVI ordonna sa suppression.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="porteMordelaise1">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/Porte_Mordelaise_Rennes.jpg" />
+        </resources>
+        <text>Rempart et porte mordelaise rue des portes mordelaises</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="" />
+        </resources>
+        <text>La porte Mordelaise (ou portes Mordelaises) est l'un des plus beaux vestiges qui subsiste à Rennes de la ville médiévale et de l'architecture militaire du XVe siècle.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text> Elle fut reconstruite sur ses anciennes bases en 1440, mais il devait exister une porte en cet endroit dès l'époque gallo-romaine.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="cathédrale">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/Cathedral_Rennes.jpg" />
+        </resources>
+        <text>Cathédrale Saint-Pierre de Rennes Rue de la Monnaie</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>La cathédrale Saint-Pierre de Rennes est la cathédrale catholique romaine, située au cœur de la ville de Rennes, en Bretagne. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Elle est le siège de l’archidiocèse de Rennes, Dol et Saint-Malo. De style classique, elle est l'une des neuf cathédrales historiques de Bretagne. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Elle fait l'objet d'un classement au titre des monuments historiques depuis le 30 octobre 1906.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="MaisonTiKoz1505">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/rue-saint-guillaume-tikoz.jpg" />
+        </resources>
+        <text>Maison Ti-Koz 1505 rue Saint Guillaume</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>La maison date du XVIe siècle et a été construite pour des chanoines de la cathédrale voisine.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="HotelMonnaiesBretagne">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/hotel-des-monnaies.jpg" />
+        </resources>
+        <text>Hôtel des monnaies de Bretagne Rue de la Monnaie</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>1418-1774 - L’Hôtel de France, situé dans la rue de la Monnaie, était autrefois l’Hôtel des Monnaies, l'endroit où était frappée la monnaie royale à l'époque des États de Bretagne, de 1732 à 1774, sous le règne du roi Louis XV.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Officedutourisme(ancien)">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/office-tourisme.jpg" />
+        </resources>
+        <text>Office du tourisme (ancien) Rue Saint Yves</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Située dans la chapelle Saint Yves. Lieu incontournable pour son histoire mais surtout pour les renseignements que vous allez obtenir en vous y rendant !</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>De nombreuses visites (sur rendez vous) vous sont proposées. Visite insolite, visite du parlement... Edit: il a déménagé au 1 rue de st malo !</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Condate">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/condate.jpg" />
+        </resources>
+        <text>Condate confluence de l'Ille et de la Vilaine</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Condate est le nom gaulois de la ville de Rennes.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Ce nom signifie 'confluence', le point ou deux cours d'eau se recontre, l'Ille et la Vilaine. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text> La où tout a commencé. Ce point est sur l'eau, pas la peine de s'y rendre.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Enigme3">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/phoenix.png" />
+        </resources>
+        <text>Le phénix</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Tu passes sur les traces d'un évenement majeur qui re-dessina Rennes autrefois. Sais-tu de quoi je parle ? Sais-tu quand cela s'est produit ?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="Incendie" random="yes" keepShowing="yes" preListening="yes" editor-x="285" editor-y="50" x="285" y="50">
+      <speak-player correct="true">
+        <text>Incendie</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Inondation</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Tremblement de Terre</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="731" editor-y="43">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/incendie-rennes-1720.jpg" />
+        </resources>
+        <text>1720, l'incendie de Rennes détruit une bonne partie des habitations en bois de la ville. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Suivre la rue de toulouse.</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="enigme3" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="672" editor-y="282">
+      <speak-player>
+        <resources name="No name" />
+        <text>Et non!!!</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Indice 1: Le phénix renait toujours de ces cendres.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="259" editor-y="506">
+      <speak-player>
+        <resources name="No name" />
+        <text>Et non!!!</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Indice2 : Le feu ça brûle!</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="incendie">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/incendie-rennes-1720.jpg" />
+        </resources>
+        <text>Incendie de Rennes 23 - 29 décembre 1720</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Peu avant noël, un malheureux ébéniste mit le feu à son établissement. </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Le feu se propagea à toute la ville au nord de la vilaine, pendant près de 7 jours. Rennes étant majoritairement bâtit en bois, un cinquième de la ville partit en fumée. Rennes en fu à jamais marquée. Il suffit d'observer par exemple rue du chapitre les différents style architecturaux des diverses bâtisses qui occupent la rue, le bois est remplacé par la pierre.  Un habitant sur trois s'est retrouvé sans logement. Depuis un dicton est né: 'À Rennes, rien ne prend, sauf le feu'</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="rueToulouse">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/rue-de-toulouse.jpg" />
+        </resources>
+        <text>Rue de Toulouse</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>La rue de toulouse n'a rien à voir avec la ville de Toulouse mais fait référence au comte de Toulouse,</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="devantureMagazin">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/magasin-rue-de-toulouse.jpg" />
+        </resources>
+        <text>Devanture de magasin en bois Rue de Toulouse</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>A l'angle de la rue se trouve un magasin de chaussure. Admirez la devanture en bois.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Enigme4">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="" />
+        </resources>
+        <text>Classe Concorde</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/hermine.jpg" />
+        </resources>
+        <text>Aujourd'hui ressuscité, j'ai vogué sur l'atlantique. Cet animal emblématique de la Bretagne pourrait bien t’aider, enfin pour cela il faut lui donner un peu d’eau.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="Incendie" random="yes" keepShowing="yes" preListening="yes" editor-x="285" editor-y="50" x="285" y="50">
+      <speak-player correct="true">
+        <text>L'hermione</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>La Concorde</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>La Santa María</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="737" editor-y="0">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/incendie-rennes-1720.jpg" />
+        </resources>
+        <text>Hermione, le bateau qui emmena le marquis de La Fayette de Rochefort à Boston en 1780</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/lafayette.png" />
+        </resources>
+        <text>Le marquis de La Fayette</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text> Général pendant la guerre d'indépendance des États-Unis d'Amérique</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text> Quel personnage ! Et quelle époque ! Cet homme a vécu deux révolutions, combatut avec les américains et aujourd'hui le seul français citoyen d'honneur des États-Unis d'Amérique. Sa vie est une aventure</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Engagez vous dans la rue La Fayette</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="enigme4" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="672" editor-y="282">
+      <speak-player>
+        <resources name="No name" />
+        <text>Et non!!!</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Indice 1: J'ai transporté un personnage illustre pour les États-Unis d'Amérique.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="259" editor-y="506">
+      <speak-player>
+        <resources name="No name" />
+        <text>Et non!!!</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Indice2 : Je suis une frégate, ma réplique fût construite en 2014 à Rochefort.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="TourSaintJames">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/tour-saint-james.jpg" />
+        </resources>
+        <text>La tour Saint-James. rue La Fayette</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Ancienne rue Dauphine, la rue La fayette accueillait avant l'incendie de Rennes de 1720 la tour Saint-James.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Enigme5">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/metro-paris-rennes.jpg" />
+        </resources>
+        <text>Un carrefour de notre histoire</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="" />
+        </resources>
+        <text>Vous voila à un tournant de l'Histoire de France. Anciennement royale, je symbolise le peuple dans l'état. Saurez vous prendre le bon chemin?</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="Incendie" random="yes" keepShowing="yes" preListening="yes" editor-x="285" editor-y="50" x="285" y="50">
+      <speak-player correct="true">
+        <text>La Nation</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>La République</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Le Parlement</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="731" editor-y="43">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/incendie-rennes-1720.jpg" />
+        </resources>
+        <text> La révolution française mène à la nation. Saviez vous que Rennes fut l'une des premières villes à se soulever, lors de la journée des bricoles ?</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/500.jpg" />
+        </resources>
+        <text>La journée des bricoles les prémisses de la révolution française</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Les 26 et 27 janvier 1789, une émeute éclate place du Palais (Place du Parlement de Bretagne) entre les étudiants et les nobles, c'est la journée des Bricoles, première journée révolutionnaire rennaise où sera versé le premier sang de la Révolution, écrira Chateaubriand.</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Prenez la rue nationale</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="enigme5" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="672" editor-y="282">
+      <speak-player>
+        <resources name="No name" />
+        <text>Et non!!!</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Indice 1: bleu, blanc, rouge</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="259" editor-y="506">
+      <speak-player>
+        <resources name="No name" />
+        <text>Et non!!!</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Indice2 : tout droit</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="CartePostale">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/rue-nationale.jpg" />
+        </resources>
+        <text>Carte postale Rue nationale </text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Ancienne rue Royale menant au palais royale, aujourd'hui le parlement.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="PalaisDuParlement">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/parlement.jpg" />
+        </resources>
+        <text>Palais du Parlement Place du Parlement</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Tout une histoire ce parlement. Il se visite (voir avec l'office du tourisme). Ouvert en général pour les journées du patrimoine.</text>
+      </speak-player>
+      <condition />
+      <end-conversation />
+    </dialogue-node>
+  </graph-conversation>
+  <graph-conversation id="Enigme6">
+    <dialogue-node nodeindex="0" editor-x="50" editor-y="50">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/Ex_Libris.png" />
+        </resources>
+        <text>Je veux être Chateaubriand ou rien</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="" />
+        </resources>
+        <text>Mon premier va çà et là, Mon deuxième est employé des Postes, Mon troisième ne rit pas jaune, Mon quatrième n'est pas pressé, Mon tout est le plus célèbres des auteurs des charades à tiroir.</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <option-node nodeindex="1" question="Incendie" random="yes" keepShowing="yes" preListening="yes" editor-x="285" editor-y="50" x="285" y="50">
+      <speak-player correct="true">
+        <text>Victor Hugo</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="2" />
+      <speak-player>
+        <text>Jules Vernes</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="3" />
+      <speak-player>
+        <text>Emile Zola</text>
+        <resources name="No name" />
+      </speak-player>
+      <condition />
+      <child nodeindex="4" />
+    </option-node>
+    <dialogue-node nodeindex="2" editor-x="731" editor-y="43">
+      <speak-player>
+        <resources name="No name">
+          <asset type="image" uri="assets/image/incendie-rennes-1720.jpg" />
+        </resources>
+        <text>Victor Hugp</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>Prenez la rue à mon nom. Vous voilà à destination. Félicitation!!!!</text>
+      </speak-player>
+      <condition />
+      <end-conversation>
+        <effect>
+          <activate flag="enigme6" />
+          <condition />
+        </effect>
+      </end-conversation>
+    </dialogue-node>
+    <dialogue-node nodeindex="3" editor-x="672" editor-y="282">
+      <speak-player>
+        <resources name="No name" />
+        <text>Et non!!!</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>indice 1 : J'ai écris le roman 'Quatrevingt-treize'</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+    <dialogue-node nodeindex="4" editor-x="259" editor-y="506">
+      <speak-player>
+        <resources name="No name" />
+        <text>Et non!!!</text>
+      </speak-player>
+      <condition />
+      <speak-player>
+        <resources name="No name" />
+        <text>indice 2 : J'ai écris le roman 'Les Misérables'</text>
+      </speak-player>
+      <condition />
+      <child nodeindex="1" />
+    </dialogue-node>
+  </graph-conversation>
+  <object id="TablePeutinger" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/TabulaPeutingeriana-parchemin.jpg" />
+      <asset type="icon" uri="assets/icon/TabulaPeutingeriana-parchemin.jpg" />
+      <asset type="imageover" uri="assets/image/TabulaPeutingeriana-parchemin.jpg" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <show-text x="300" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="">La Table de Peutinger - Codex Vindobonensis 324
+La Table de Peutinger est une compilation de cartes romaines
+antérieure à la fin du Ier siècle qui a ensuite été mise à jour 
+au IVe siècle et au Ve siècle.
+Tout l'empire romain y est représenté. 
+Saurez vous trouver la France et la Bretagne ?</show-text>
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="PlanBretagne" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/thumb-Tabula-ducatus britanniae-gallis.jpg" />
+      <asset type="icon" uri="assets/icon/thumb-Tabula-ducatus britanniae-gallis.jpg" />
+      <asset type="imageover" uri="assets/image/thumb-Tabula-ducatus britanniae-gallis.jpg" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <show-text x="300" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="">Bretagne- 1720 | Plan de bretagne
+Une carte de Bretagne de 1720. 
+Notez les noms des villes avoisinant Rennes ont une orthographe légèrement différente.</show-text>
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="VueRennes" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/thumb-rennes-episcopale.jpg" />
+      <asset type="icon" uri="assets/icon/thumb-rennes-episcopale.jpg" />
+      <asset type="imageover" uri="assets/image/thumb-rennes-episcopale.jpg" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <show-text x="300" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="">Vue Rennes - 1644
+Rennes fin moyen âge
+Une vue intéressante de Rennes direction nord. 
+Les bâtiments y sont référencés en légende.</show-text>
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="PlanArgentré" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/thumb-plan-d-argentre-1616.jpg" />
+      <asset type="icon" uri="assets/icon/thumb-plan-d-argentre-1616.jpg" />
+      <asset type="imageover" uri="assets/image/thumb-plan-d-argentre-1616.jpg" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <show-text x="300" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="">Plan d'argentré - 1616
+Rennes fin moyen âge
+Ce plan dessiné par V.C. Carol d'Argentré P en 1616 représente la ville de Rennes. 
+Subsite aujourd'hui de ce plan; les portes Mordelaises, la cathédrale, la place des Lices,
+une tour est un bout de rempart et d'autres vestiges moins visibles...</show-text>
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="PlanHévin" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/thumb-plan-hevin-1685.jpg" />
+      <asset type="icon" uri="assets/icon/thumb-plan-hevin-1685.jpg" />
+      <asset type="imageover" uri="assets/image/thumb-plan-hevin-1685.jpg" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+    <actions>
+      <examine needsGoTo="no" keepDistance="0" not-effects="no">
+        <effect>
+          <show-text x="300" y="300" frontColor="#FFFFFFFF" borderColor="#000000FF" uri="">Plan Hévin - 1685
+Rennes fin moyen âge
+Plan dessiné par Hévin (?), on y voit la ville séparée en 3 zones. 
+Zone A : la cité, zone B : la ville-neuve et zone C : la nouvelle-ville. 
+Ici aussi on y trouve une légende fort intéressante.</show-text>
+          <condition />
+        </effect>
+      </examine>
+    </actions>
+  </object>
+  <object id="planForestier1726" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/image/thumb-plan-forestier-1726.jpg" />
+      <asset type="icon" uri="assets/icon/thumb-plan-forestier-1726.jpg" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+  <object id="plan1782" returnsWhenDragged="yes" behaviour="normal" resources-transition-time="0">
+    <resources name="No name">
+      <asset type="image" uri="assets/special/EmptyImage.png" />
+      <asset type="icon" uri="assets/special/EmptyIcon.png" />
+    </resources>
+    <description>
+      <name>
+      </name>
+      <brief>
+      </brief>
+      <detailed>
+      </detailed>
+    </description>
+  </object>
+</eAdventure>
